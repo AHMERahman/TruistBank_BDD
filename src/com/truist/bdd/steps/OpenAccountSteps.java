@@ -5,16 +5,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class OpenAccountSteps extends Base{
+public class OpenAccountSteps extends Base {
 
 	@Given("The user is in home page")
 	public void the_user_is_in_home_page() {
-	  openAccountPage.getTitle();  
+		openAccountPage.getUrl();;
 	}
 
 	@Then("the user  clicks on Open Account")
 	public void the_user_clicks_on_open_account() {
-	  openAccountPage.clickOpenAccount();
+		openAccountPage.clickOpenAccount();
 	}
 
 	@Then("the user  clicks on credit card")
@@ -39,7 +39,7 @@ public class OpenAccountSteps extends Base{
 
 	@Then("the url of the page is")
 	public void the_url_of_the_page_is() {
-		openAccountPage.getTitle();
+		openAccountPage.getUrl();;
 	}
 
 	@Then("the user clicks Start")

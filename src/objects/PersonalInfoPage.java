@@ -48,44 +48,48 @@ public class PersonalInfoPage {
 
 	@FindBy(xpath = "//*[@id=\'tru-core-checkbox-label-1\']/tru-core-form-field-label")
 	WebElement checkBoxElement;
+	
+	public void getTitle() {
+		commons.getCurrentUrl(driver);
+	}
 
-	private void inputFirstName(String firstName) {
+	public void inputFirstName(String firstName) {
 		commons.inputValue(firstNameElement, firstName);
 	}
 
-	private void inputLastName(String lastName) {
+	public void inputLastName(String lastName) {
 		commons.inputValue(lastNameElement, lastName);
 	}
 
-	private void clickSelectCitizenship() {
+	public void clickSelectCitizenship() {
 		commons.click(selectCitizenshipElement);
 	}
 
-	private void clickPermanentResident() {
+	public void clickPermanentResident() {
 		commons.click(permResidentElement);
 	}
 
-	private void clickAdditionalCitizenship() {
+	public void clickAdditionalCitizenship() {
 		commons.click(selectAdditionalCitizenshipElement);
 	}
 
-	private void clickBangladesh() {
+	public void clickBangladesh() {
 		commons.click(bangladeshElement);
 	}
 
-	private void inputDOB(String dob) {
+	public void inputDOB(String dob) {
 		commons.inputValue(inputDOBElement, dob);
 	}
 
-	private void inputSSN(String ssn) {
+	public void inputSSN(String ssn) {
 		commons.inputValue(ssnElement, ssn);
 	}
 
-	private void inputMobile(String mobileNum) {
+	public void inputMobile(String mobileNum) {
 		commons.inputValue(inputMobileNumElement, mobileNum);
 	}
 
-	private void clickCheckBox() {
+	public void clickCheckBox() {
 		commons.click(checkBoxElement);
 	}
 

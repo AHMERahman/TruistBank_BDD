@@ -35,25 +35,30 @@ public class GoToPersonalInfoFormPage {
 
 	@FindBy(xpath = "//h1")
 	WebElement subheadingElement2;
+	
+	
+	public void getTitle() {
+		commons.getCurrentUrl(driver);
+	}
 
-	private void clickNo() {
+	public void clickNo() {
 		commons.click(noElement);
 	}
 
-	private void getSubheading(String expectedSubheading) {
+	public void getSubheading(String expectedSubheading) {
 		assertEquals(commons.getText(getSubheadingElement), expectedSubheading);
 	}
 
-	private void inputZipcode(String value) {
+	public void inputZipcode(String value) {
 		commons.inputValue(zipCodeElement, value);
 	}
 
-	private void clickContinue() {
+	public void clickContinue() {
 		commons.click(continueElement);
 	}
 
-	private void getSubheading2(String expected2) {
-		assertEquals(commons.getText(subheadingElement2), expected2);
+	public void getSubheading2(String expected2) {
+		assertEquals(commons.getText(subheadingElement2).replaceAll("[^a-zA-Z]",""), expected2.replaceAll("[^a-zA-Z]",""));
 	}
 
 	public void goToPersonalInfoFormPageSteps(String expectedSubheading, String value, String expected2) {

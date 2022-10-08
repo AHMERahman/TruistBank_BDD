@@ -40,7 +40,7 @@ public class OpenAccountPage {
 	@FindBy(xpath = "//button[@class='tru-core-button tru-core-button-primary']")
 	WebElement startElement;
 	
-	public void getTitle() {
+	public void getUrl() {
 		commons.getCurrentUrl(driver);
 	}
 
